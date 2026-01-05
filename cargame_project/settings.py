@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_#uf2qghbx#nzy4+bl^0wc8e&x!+xz1e)t9n#pnyu=yn$0m59j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # প্রোডাকশনের জন্য False কর
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # Render-এর সাবডোমেইনের জন্য * ঠিক আছে
 
 
 # Application definition
