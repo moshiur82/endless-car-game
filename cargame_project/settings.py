@@ -117,8 +117,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# তোর কাস্টম static ফোল্ডার (development-এর জন্য)
 STATICFILES_DIRS = [
     BASE_DIR / "game" / "static",
 ]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
