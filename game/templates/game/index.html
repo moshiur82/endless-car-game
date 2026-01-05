@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Car Driving Game 🚗💨</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .game-container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        canvas {
+            border: 4px solid #333;
+            background: #222;
+            margin: 20px 0;
+        }
+        .ui {
+            font-size: 20px;
+            margin: 10px;
+        }
+        .controls {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Endless Car Driving Game</h1>
+        <div class="ui">
+            <div>Distance: <span id="distance">0</span> km</div>
+            <div>Fuel: <span id="fuel">100</span>%</div>
+            <div>Speed: <span id="speed">0</span> km/h</div>
+            <div>Score: <span id="score">0</span></div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div class="controls">
+            <p>← → বা A D দিয়ে লেন চেঞ্জ | ↑ ↓ দিয়ে স্পিড কন্ট্রোল</p>
+            <button id="startBtn">Start Game</button>
+            <button id="pauseBtn" style="display:none;">Pause</button>
+        </div>
+    </div>
+
+  <script src="{% static 'game/js/game.js' %}"></script>
+</body>
+</html>
